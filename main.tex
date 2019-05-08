@@ -1,0 +1,52 @@
+\documentclass[a4paper]{article}
+
+%% Language and font encodings
+\usepackage[english]{babel}
+\usepackage[utf8x]{inputenc}
+\usepackage[T1]{fontenc}
+
+%% Sets page size and margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=1.75cm]{geometry}
+% keep figures in proper sections
+\usepackage[section]{placeins}
+
+%% Useful packages
+\usepackage{bm}
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{listings}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage[colorlinks=true, allcolors=blue]{hyperref}
+\usepackage{booktabs}
+\usepackage{longtable}
+\usepackage{pgfplotstable}
+\pgfplotsset{compat=1.9}% supress warning
+\usepackage{array}
+\newcolumntype{C}{>{\centering\arraybackslash}m{1.5cm}}
+\newcolumntype{P}{>{\raggedright\arraybackslash}p{6.5cm}}
+
+%% macros
+\usepackage{mathtools}
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lVert}{\rVert}%
+
+\title{Modeling the Collective Forging Behavior of Ants on Uneven Terrain}
+\author{You}
+
+\begin{document}
+\maketitle
+
+\input{tex/abstract.tex}
+
+\input{tex/introduction.tex}
+
+\input{tex/model.tex}
+
+\input{tex/results.tex}
+
+\input{tex/discussion.tex}
+
+\bibliography{sample}
+\bibliographystyle{apalike}
+
+\end{document}

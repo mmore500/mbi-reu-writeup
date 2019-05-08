@@ -1,0 +1,34 @@
+name, value, unit, notes
+max\_stepmax\_step,0.01,,seem to need to specify a maximum step size for the ode solver or else ants escape out of bounds of the arena
+odesolver\_RelTol,0.02,,
+odesolver\_AbsTol,2,,I suspect that for slow pheromone evaporation rates... the absolute amount of pheromone becomes HUGE and then the absolute tolerance makes the solver go WAY too slow
+max\_init\_velocity,1,,the maximum initial velocity that we want ants to be initialized with
+sigma\_rm,1,,specifies the standard deviation of ant turn angles
+beta\_rm ,1,,affects rate (event/distance) at which ant undergoes reorientation events
+returner\_dewiggle\_factor,10,,how should the standard deviation of ant turn angles be affected by the ant being in the role of returner? (the standard deviation of ant turn angles is divided by this factor)
+forager\_pher\_dewiggle,-1.3862943611,,how should the standard deviation of ant turn angles be affected by the ant experiencing a high pheromone concentration? (the standard deviation of ant turn angles is multiplied by e\^(max\_conc\_observed by ant * this factor)
+slope\_freepath,0.3464,,slope\_freepath causes lengthening of free path as ant travels in alignment with gradient on steeper slope
+a\_1,0.0500,,turning due to orientation relative to incline--straight or turn
+b\_1,0.1625,,turning due to orientation relative to incline--straight or turn
+c\_1,1.5,,turning due to orientation relative to incline--straight or turn
+m\_2,0.2372,,turning due to orientation relative to incline--left or right
+n\_2,0.3195,,turning due to orientation relative to incline--left or right
+grav\_behav\_turn\_size,pi/6,,magnitude of the behavioral turn due to gravity
+dist\_switch\_role\_squared,1,,the distance from food/nest at which the ant switches roles
+near\_nest\_accel\_const,80,,
+near\_nest\_decay\_const,-0.7,,
+phgrid\_size,0.25,cm,pheromone grid and behavior spacing between grid points - in cm
+sense\_radius,2,cm,how far away from current position ant can sense pheromone - in cm
+attraction\_to\_food\_1,-0.693,,e\^(coeff*dist) -- smaller = more attraction
+attraction\_to\_food\_2,2,,coeff * e\^(-dist) -- larger = more attraction
+attraction\_to\_nest,1,,rate at which ant proceeds towards nest
+nest\_orien\_k,1.32381,,nest orien accel
+max\_nest\_orein\_accel,7,,nest orien accel
+pheromone\_rate,1,,rate at which ant deposits pheromone
+evap\_lambda,-0.005776,,half life of pheromone is about 20 min; lambda = ln(1/2)/1200 [1200 = 20 * 60 sec]
+attraction\_to\_pheromone,10,,how strongly does an ant respond to pheromone
+ant\_length,0.5,cm,how long and wide is the ant (in cm)
+ant\_width,0.3,cm,how long and wide is the ant (in cm)
+ant\_power,0.8115,,
+incline\_scale,1.2144,,
+gravity\_scale,0.2005,,

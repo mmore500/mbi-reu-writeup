@@ -1,0 +1,21 @@
+\noindent
+\pgfplotstabletypeset[
+    begin table=\begin{longtable},
+    end table=\end{longtable}, 
+    string type,
+    col sep=comma,
+    columns={name,value,unit,notes},
+    columns/name/.style={column type=l},
+    columns/value/.style={column type=c},
+    columns/unit/.style={column type=c},
+    columns/notes/.style={column type=P},
+    every head row/.style={
+        before row=\toprule,
+        after row=
+            \cmidrule(lr){1-1}
+            \cmidrule(lr){2-2}
+            \cmidrule(lr){3-3}
+            \cmidrule(lr){4-4}
+    },
+    every last row/.style={after row=\bottomrule}
+    ]{consts.csv}
